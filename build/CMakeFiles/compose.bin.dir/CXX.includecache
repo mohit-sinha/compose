@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/media/mohit/D/projects/compose/Procrustes.h
+iostream
+-
+opencv2/opencv.hpp
+-
+
 /media/mohit/D/projects/compose/compose.cpp
 chrono
 -
@@ -14,5 +20,13 @@ thread
 gflags/gflags.h
 -
 openpose/headers.hpp
+-
+procrustes.cpp
+/media/mohit/D/projects/compose/procrustes.cpp
+
+/media/mohit/D/projects/compose/procrustes.cpp
+Procrustes.h
+/media/mohit/D/projects/compose/Procrustes.h
+random
 -
 

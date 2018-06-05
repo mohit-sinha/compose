@@ -28,6 +28,7 @@
 #endif
 // OpenPose dependencies
 #include <openpose/headers.hpp>
+#include "procrustes.cpp"
 
 // See all the available parameter options withe the `--help` flag. E.g. `build/examples/openpose/openpose.bin --help`
 // Note: This command will show you flags for other unnecessary 3rdparty files. Check only the flags for the OpenPose
@@ -248,9 +249,15 @@ class WUserOutput : public op::WorkerConsumer<std::shared_ptr<std::vector<UserDa
 public:
     void initializationOnThread() {}
 
-    std::string procrustes(const std::vector<std::vector<float>> mat) {
+    std::string procrustesEnClass(std::vector<std::vector<float>> vec) {
 
-        return std::to_string(mat[0][0]);       
+        cv::Mat noob = cv::Mat(15,2,CV_32FC1);
+        memcpy(noob.data, vec.data(), vec.size()*sizeof(float));
+        cv::Mat model = cv::Mat(15,2,CV_32FC1);
+        Procrustes proc;
+        proc.procrustes( model, noob);
+
+        return std::to_string(proc.error);       
     }
 
     void workConsumer(const std::shared_ptr<std::vector<UserDatum>>& datumsPtr)
@@ -285,7 +292,9 @@ public:
                         op::log(valueToPrint);
                     }
                 }
-                op::log("\nProcrustes Score: " + procrustes(mat));
+                
+
+                op::log("\nProcrustes Score: " + procrustesEnClass(mat));
                 op::log(" ");
                 // Alternative: just getting std::string equivalent
                 op::log("Face keypoints: " + datumsPtr->at(0).faceKeypoints.toString());
