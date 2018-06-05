@@ -248,10 +248,9 @@ class WUserOutput : public op::WorkerConsumer<std::shared_ptr<std::vector<UserDa
 public:
     void initializationOnThread() {}
 
-    std::string procrustes(const op::Array<float>& points) {
+    std::string procrustes(const std::vector<std::vector<float>> mat) {
 
-        if(points.getSize(0)) {return std::to_string(points[{0, 0, 1}]);}
-        return "0";
+        return std::to_string(mat[0][0]);       
     }
 
     void workConsumer(const std::shared_ptr<std::vector<UserDatum>>& datumsPtr)
@@ -260,8 +259,11 @@ public:
         {
             // User's displaying/saving/other processing here
                 // datum.cvOutputData: rendered frame with pose or heatmaps
-                // datum.poseKeypoints: Array<float> with the estimated pose
-            //std::vector< <vector<float> > mat(15, vector<float>2);
+                // datum.poseKeypoints: Array<float> with the estimated pose            
+
+            std::vector<std::vector<float>> mat;
+            mat.resize(15, std::vector<float>(2, 0));
+
             if (datumsPtr != nullptr && !datumsPtr->empty())
             {
                 // Show in command line the resulting pose keypoints for body, face and hands
@@ -278,11 +280,12 @@ public:
                         for (auto xyscore = 0 ; xyscore < poseKeypoints.getSize(2) ; xyscore++)
                         {
                             valueToPrint += std::to_string(   poseKeypoints[{person, bodyPart, xyscore}]   ) + " ";
+                            if (person == 0 && xyscore < 2) { mat[bodyPart][xyscore] =  poseKeypoints[{person, bodyPart, xyscore}];} 
                         }
                         op::log(valueToPrint);
                     }
                 }
-                op::log("\nProcrustes Score: " + procrustes(poseKeypoints));
+                op::log("\nProcrustes Score: " + procrustes(mat));
                 op::log(" ");
                 // Alternative: just getting std::string equivalent
                 op::log("Face keypoints: " + datumsPtr->at(0).faceKeypoints.toString());
