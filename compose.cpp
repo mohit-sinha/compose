@@ -259,7 +259,7 @@ public:
 
         return std::to_string(proc.error);       
     }
-
+    
     void workConsumer(const std::shared_ptr<std::vector<UserDatum>>& datumsPtr)
     {
         try
