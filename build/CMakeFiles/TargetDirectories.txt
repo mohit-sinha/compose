@@ -1,3 +1,3 @@
-/media/mohit/D/projects/PoseComp/build/CMakeFiles/edit_cache.dir
-/media/mohit/D/projects/PoseComp/build/CMakeFiles/rebuild_cache.dir
-/media/mohit/D/projects/PoseComp/build/CMakeFiles/a.bin.dir
+/media/mohit/D/projects/compose/build/CMakeFiles/edit_cache.dir
+/media/mohit/D/projects/compose/build/CMakeFiles/rebuild_cache.dir
+/media/mohit/D/projects/compose/build/CMakeFiles/compose.bin.dir

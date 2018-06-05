@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/media/mohit/D/projects/PoseComp/new.cpp" "/media/mohit/D/projects/PoseComp/build/CMakeFiles/a.bin.dir/new.cpp.o"
+  "/media/mohit/D/projects/compose/compose.cpp" "/media/mohit/D/projects/compose/build/CMakeFiles/compose.bin.dir/compose.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

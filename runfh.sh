@@ -1,2 +1,2 @@
 cd build/
-./a.bin --face --hand
+./compose.bin --face --hand

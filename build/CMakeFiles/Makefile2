@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/mohit/D/projects/PoseComp
+CMAKE_SOURCE_DIR = /media/mohit/D/projects/compose
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/mohit/D/projects/PoseComp/build
+CMAKE_BINARY_DIR = /media/mohit/D/projects/compose/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/a.bin.dir
+# Target rules for target CMakeFiles/compose.bin.dir
 
 # All Build rule for target.
-CMakeFiles/a.bin.dir/all:
-	$(MAKE) -f CMakeFiles/a.bin.dir/build.make CMakeFiles/a.bin.dir/depend
-	$(MAKE) -f CMakeFiles/a.bin.dir/build.make CMakeFiles/a.bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/mohit/D/projects/PoseComp/build/CMakeFiles --progress-num=1,2 "Built target a.bin"
-.PHONY : CMakeFiles/a.bin.dir/all
+CMakeFiles/compose.bin.dir/all:
+	$(MAKE) -f CMakeFiles/compose.bin.dir/build.make CMakeFiles/compose.bin.dir/depend
+	$(MAKE) -f CMakeFiles/compose.bin.dir/build.make CMakeFiles/compose.bin.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/mohit/D/projects/compose/build/CMakeFiles --progress-num=1,2 "Built target compose.bin"
+.PHONY : CMakeFiles/compose.bin.dir/all
 
 # Include target in all.
-all: CMakeFiles/a.bin.dir/all
+all: CMakeFiles/compose.bin.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/a.bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/mohit/D/projects/PoseComp/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/a.bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/mohit/D/projects/PoseComp/build/CMakeFiles 0
-.PHONY : CMakeFiles/a.bin.dir/rule
+CMakeFiles/compose.bin.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/mohit/D/projects/compose/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/compose.bin.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/mohit/D/projects/compose/build/CMakeFiles 0
+.PHONY : CMakeFiles/compose.bin.dir/rule
 
 # Convenience name for target.
-a.bin: CMakeFiles/a.bin.dir/rule
+compose.bin: CMakeFiles/compose.bin.dir/rule
 
-.PHONY : a.bin
-
-# clean rule for target.
-CMakeFiles/a.bin.dir/clean:
-	$(MAKE) -f CMakeFiles/a.bin.dir/build.make CMakeFiles/a.bin.dir/clean
-.PHONY : CMakeFiles/a.bin.dir/clean
+.PHONY : compose.bin
 
 # clean rule for target.
-clean: CMakeFiles/a.bin.dir/clean
+CMakeFiles/compose.bin.dir/clean:
+	$(MAKE) -f CMakeFiles/compose.bin.dir/build.make CMakeFiles/compose.bin.dir/clean
+.PHONY : CMakeFiles/compose.bin.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/compose.bin.dir/clean
 
 .PHONY : clean
 

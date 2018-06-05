@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/mohit/D/projects/PoseComp
+CMAKE_SOURCE_DIR = /media/mohit/D/projects/compose
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/mohit/D/projects/PoseComp/build
+CMAKE_BINARY_DIR = /media/mohit/D/projects/compose/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/mohit/D/projects/PoseComp/build/CMakeFiles /media/mohit/D/projects/PoseComp/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/mohit/D/projects/compose/build/CMakeFiles /media/mohit/D/projects/compose/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/mohit/D/projects/PoseComp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/mohit/D/projects/compose/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named a.bin
+# Target rules for targets named compose.bin
 
 # Build rule for target.
-a.bin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 a.bin
-.PHONY : a.bin
+compose.bin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 compose.bin
+.PHONY : compose.bin
 
 # fast build rule for target.
-a.bin/fast:
-	$(MAKE) -f CMakeFiles/a.bin.dir/build.make CMakeFiles/a.bin.dir/build
-.PHONY : a.bin/fast
+compose.bin/fast:
+	$(MAKE) -f CMakeFiles/compose.bin.dir/build.make CMakeFiles/compose.bin.dir/build
+.PHONY : compose.bin/fast
 
-new.o: new.cpp.o
+compose.o: compose.cpp.o
 
-.PHONY : new.o
+.PHONY : compose.o
 
 # target to build an object file
-new.cpp.o:
-	$(MAKE) -f CMakeFiles/a.bin.dir/build.make CMakeFiles/a.bin.dir/new.cpp.o
-.PHONY : new.cpp.o
+compose.cpp.o:
+	$(MAKE) -f CMakeFiles/compose.bin.dir/build.make CMakeFiles/compose.bin.dir/compose.cpp.o
+.PHONY : compose.cpp.o
 
-new.i: new.cpp.i
+compose.i: compose.cpp.i
 
-.PHONY : new.i
+.PHONY : compose.i
 
 # target to preprocess a source file
-new.cpp.i:
-	$(MAKE) -f CMakeFiles/a.bin.dir/build.make CMakeFiles/a.bin.dir/new.cpp.i
-.PHONY : new.cpp.i
+compose.cpp.i:
+	$(MAKE) -f CMakeFiles/compose.bin.dir/build.make CMakeFiles/compose.bin.dir/compose.cpp.i
+.PHONY : compose.cpp.i
 
-new.s: new.cpp.s
+compose.s: compose.cpp.s
 
-.PHONY : new.s
+.PHONY : compose.s
 
 # target to generate assembly for a file
-new.cpp.s:
-	$(MAKE) -f CMakeFiles/a.bin.dir/build.make CMakeFiles/a.bin.dir/new.cpp.s
-.PHONY : new.cpp.s
+compose.cpp.s:
+	$(MAKE) -f CMakeFiles/compose.bin.dir/build.make CMakeFiles/compose.bin.dir/compose.cpp.s
+.PHONY : compose.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... a.bin"
-	@echo "... new.o"
-	@echo "... new.i"
-	@echo "... new.s"
+	@echo "... compose.bin"
+	@echo "... compose.o"
+	@echo "... compose.i"
+	@echo "... compose.s"
 .PHONY : help
 
 

@@ -11,6 +11,6 @@ find_package(OpenPose REQUIRED)
 
 include_directories(${OpenPose_INCLUDE_DIRS} ${GFLAGS_INCLUDE_DIR} ${GLOG_INCLUDE_DIR} ${OpenCV_INCLUDE_DIRS})
 
-add_executable(a.bin new.cpp)
+add_executable(compose.bin compose.cpp)
 
-target_link_libraries(a.bin ${OpenPose_LIBS} ${GFLAGS_LIBRARY} ${GLOG_LIBRARY} ${OpenCV_LIBS})
+target_link_libraries(compose.bin ${OpenPose_LIBS} ${GFLAGS_LIBRARY} ${GLOG_LIBRARY} ${OpenCV_LIBS})

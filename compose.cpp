@@ -261,6 +261,7 @@ public:
             // User's displaying/saving/other processing here
                 // datum.cvOutputData: rendered frame with pose or heatmaps
                 // datum.poseKeypoints: Array<float> with the estimated pose
+            //std::vector< <vector<float> > mat(15, vector<float>2);
             if (datumsPtr != nullptr && !datumsPtr->empty())
             {
                 // Show in command line the resulting pose keypoints for body, face and hands
