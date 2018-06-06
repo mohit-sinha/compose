@@ -23,6 +23,10 @@ openpose/headers.hpp
 -
 procrustes.cpp
 /media/mohit/D/projects/compose/procrustes.cpp
+fstream
+-
+iterator
+-
 
 /media/mohit/D/projects/compose/procrustes.cpp
 Procrustes.h

@@ -29,6 +29,8 @@
 // OpenPose dependencies
 #include <openpose/headers.hpp>
 #include "procrustes.cpp"
+#include <fstream>
+#include <iterator>
 
 // See all the available parameter options withe the `--help` flag. E.g. `build/examples/openpose/openpose.bin --help`
 // Note: This command will show you flags for other unnecessary 3rdparty files. Check only the flags for the OpenPose
@@ -253,7 +255,32 @@ public:
 
         cv::Mat noob = cv::Mat(15,2,CV_32FC1);
         memcpy(noob.data, vec.data(), vec.size()*sizeof(float));
+        /*
+        //This commented code is meant only for writing pose model file("/model/pose.compose")
+        std::ofstream output_file("./defence.compose", std::ios_base::app);
+        std::ostream_iterator<float> output_iterator(output_file, "\t");
+        for ( int i = 0 ; i < vec.size() ; i++ ) {
+            copy(vec.at(i).begin(), vec.at(i).end(), output_iterator);
+            output_file << '\n';
+        }
+        output_file << '\n';*/
+
+        //Following is the code to read from model
+        std::vector< std::vector<double> > data;
+        std::ifstream file("../pose_model/pose.compose");// file path
+        std::string line;
+        while (getline(file, line))
+        {
+            data.push_back(std::vector<double>());
+            std::istringstream ss(line);
+            double value;
+            while (ss >> value)
+            {
+                data.back().push_back(value);
+            }
+        }
         cv::Mat model = cv::Mat(15,2,CV_32FC1);
+        memcpy(model.data, data.data(), data.size()*sizeof(float));
         Procrustes proc;
         proc.procrustes( model, noob);
 
